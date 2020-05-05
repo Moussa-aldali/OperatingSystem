@@ -30,8 +30,8 @@ public:
 	CgaAttr getAttr();
 
 private:
-
-
+    char characters ;
+    CgaAttr cgaAttr;
 };
 
 #endif

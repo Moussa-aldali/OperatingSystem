@@ -21,14 +21,19 @@ private:
 
 	// Die I/O-Ports des Grafikcontrollers
 	enum Ports  {
+        Indexregister = 0x3d4,
+        Datenregister = 0x3d5
 	};
 
 	// Die Kommandos zum Cursor setzen
 	enum Cursor {
+        LOW = 15,
+        HIGH = 14
 	};
 
 	// Die Adresse des Video RAMs
 	enum Video  {
+	    offsetVram = 0xb8000;
 	};
 
 public:
@@ -53,10 +58,12 @@ public:
 	// Setzen/Lesen der globalen Bildschirmattribute
 	void setAttr(const CgaAttr& attr)
 	{
-	}
+        this -> attr = attr ;
+    }
 
 	void getAttr(CgaAttr& attr)
 	{
+        attr = this -> attr;
 	}
 
 	// Setzen/Lesen des HW-Cursors
