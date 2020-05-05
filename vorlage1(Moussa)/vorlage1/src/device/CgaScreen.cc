@@ -1,6 +1,8 @@
 #include "device/CgaScreen.h"
 #include "lib/tools.h"
 
+
+
 CgaScreen :: CgaScreen() : index ( Indexregister) , data(Datenregister)
 {
     screen = (CgaChar*) offsetVram;
@@ -85,14 +87,12 @@ void CgaScreen :: show(char ch, const CgaAttr& attr) {
 				
 				column++;
 			}
-			setCursor(column, row);
-        
+			setCursor(column, row); 
+
 
 }
 
-void CgaScreen :: show(char ch) {
 
-}
 
 
 

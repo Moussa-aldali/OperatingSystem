@@ -5,6 +5,10 @@
 #include "device/CgaChar.h"
 #include "io/IOPort.h"
 
+ extern"C"{
+	 #include "lib/tools.h"
+ }
+
 /*
  * CgaScreen:	Diese Klasse ist der Softwareprototyp fuer den
  *		CGA-Bildschirm
@@ -79,6 +83,7 @@ public:
     	// Darstellung mit aktuellen Bildschirmattributen
 	void show(char ch)
 	{
+		show(ch, attr);
 	}
 
 
