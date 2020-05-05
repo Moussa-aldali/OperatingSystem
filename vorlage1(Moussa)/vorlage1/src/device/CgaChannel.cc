@@ -34,6 +34,27 @@ int column ;
 int row ; 
 
 
+void CgaChannel :: blueScreen(const char* error){
+    clear();
+    CgaAttr attError ( CgaAttr :: WHITE , CgaAttr :: BLUE , false);
+    setAttr(attError);
+    for(int i = 0 ; i <ROWS ; i++){
+        for(int j = 0 ; j < COLUMNS ; j++)
+        {
+            setCursor(j,i);
+        }
+
+    }
+
+    setCursor(30,12);
+    int i = 0; 
+    while (error[i] !=0)
+    {
+       i++;
+    }
+    write(error,i);
+
+}
 
 void CgaChannel :: zeileInc (){
     getCursor(column, row);
@@ -50,7 +71,6 @@ void CgaChannel :: cursorFort(){
     setCursor(0,row);
 
 } 
-
 
 
 

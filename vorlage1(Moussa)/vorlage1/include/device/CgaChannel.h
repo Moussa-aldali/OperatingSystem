@@ -47,7 +47,6 @@ public:
 	private : 
 	void zeileInc() ; 
 	void cursorFort() ; 
-	void zureuckSetzen (); 
 };
 
 #endif
