@@ -43,6 +43,11 @@ public:
 
 	// Bluescreen mit eigener Fehlermeldung
 	virtual void blueScreen(const char* error);
+
+	private : 
+	void zeileInc() ; 
+	void cursorFort() ; 
+	void zureuckSetzen (); 
 };
 
 #endif

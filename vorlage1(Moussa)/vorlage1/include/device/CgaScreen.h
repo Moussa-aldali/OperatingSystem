@@ -33,7 +33,7 @@ private:
 
 	// Die Adresse des Video RAMs
 	enum Video  {
-	    offsetVram = 0xb8000;
+	    offsetVram = 0xb8000
 	};
 
 public:
